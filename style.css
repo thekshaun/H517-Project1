@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button, p, select, option {
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 0;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid yellow;
+}
+
+.row {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.margin-x-sm {
+    margin: 0 0.2rem;
+}
+
+.margin-x-lg {
+    margin: 0 0.5rem;
+}
+
+.margin-x-xl {
+    margin: 0 1rem;
+}
+
+
+.map-container {
+    height: 600px; 
+    width: 600px; 
+    overflow: hidden; 
+    border: 1px solid black;
+    margin-top: 1rem;
+}
+
+.flex { display: flex; align-items: center;}
+
+.legend {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.2rem;
+}
+
+.male {
+    border: 1px solid black;
+    background-color: darkblue;
+}
+
+.female {
+    border: 1px solid black;
+    background-color: orange;   
+}
+
+.pump {
+    height: 0.7rem;
+    width: 0.7rem;
+    border: 1px solid red;
+    background-color: yellow;
+}
+
+#svg2 .graph-path {
+    fill: none;
+    stroke: rgb(42, 87, 126);
+    stroke-width: 2px;
+}
+
+.tick text,
+.tick path {
+    fill:black;
+}
+
+.deaths-label {
+    width: 10rem;
+    height: 3rem;
+}
+
+.text-center { 
+    text-align: center; 
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+}
