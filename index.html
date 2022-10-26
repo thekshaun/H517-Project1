@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1854 London cholera epidemic</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <main>
+       <br>
+        <h2 class="text-center">1854 London cholera epidemic</h2>
+        <a class="row" href="/about.html">About</a>
+        <div class="row">
+            <section>
+                <div class="flex">
+                    <button class="margin-x-xl" onclick="resetZoom()">
+                        Reset Zoom
+                    </button>
+                    <div class="margin-x-xl">
+                        <div>
+                            <h4>Legend:</h4>
+                            <div class="flex">
+                                <div class="legend male"></div> Male
+                            </div>
+                            <div class="flex">
+                                <div class="legend female"></div> Female
+                            </div>
+                            <div class="flex">
+                                <div class="legend pump"></div> Pump
+                            </div>
+                        </div>
+                    </div>
+                    <p class="margin-x-xl" id="deaths-label" ></p>
+                </div>
+                
+                <div class="map-container">
+                    <svg id="svg1" style=" display: block;"></svg>
+                </div>
+            </section>
+
+            <div>
+                <div>
+                    <div class="row">
+                        <label class="margin-x-lg" for="">Select Gender:</label>
+                        <input class="margin-x-lg" type="radio" id="male" name="gender" value="0">
+                        <label class="margin-x-sm" for="male">Male</label><br>
+                        <input class="margin-x-lg" type="radio" id="female" name="gender" value="1">
+                        <label class="margin-x-sm" for="female">Female</label><br>
+                        <input class="margin-x-lg" type="radio" id="all" name="gender" value="all" checked>
+                        <label class="margin-x-sm" for="all">All</label><br>
+                    </div>
+                   
+                    <div class="row">
+                        <label class="margin-x-lg" for="">Select Age Group:</label>
+                        <select class="margin-x-lg" name="age-select" id="age-select">
+                            <option value="all">All</option>
+                            <option value="0">0-10</option>
+                            <option value="1">11-20</option>
+                            <option value="2">21-40</option>
+                            <option value="3">41-60</option>
+                            <option value="4">61-80</option>
+                            <option value="5"> > 80</option>
+                        </select>
+        
+                        <button class="margin-x-lg" onclick="filterMap()">
+                            Filter
+                        </button>
+                    </div>
+                </div>
+                <svg id="svg2" style=" display: block;"></svg>
+                <p class="text-center bold">(Deaths vs. Days)</p>
+            </div>
+        </div>
+        <div class="row">
+            <section>
+                <div id="bargraph1" style=" display: block;"></div>
+                <p class="text-center bold">(Distribution of deaths gender wise)</p>
+            </section>
+            <section>
+                <div id="bargraph2" style=" display: block;"></div>
+                <p class="text-center bold">(Distribution of deaths age group wise)</p>
+            </section>
+            
+        </div>
+    </main>
+</html>
